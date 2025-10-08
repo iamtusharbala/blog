@@ -7,28 +7,28 @@ function Skills() {
         <p class="text-start section-heading">Skills</p>
         <div className="skill-badge d-flex justify-content-evenly flex-wrap gap-3">
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">ServiceNow</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">ServiceNow</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">Javascript</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">Javascript</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">Angular</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">Angular</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">Node.js</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">Node.js</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">Figma</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">Figma</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">React</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">React</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">Python</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">Python</span>
           </h2>
           <h2>
-            <span class="badge text-bg-secondary section-text p-3">API Integration</span>
+            <span class="badge rounded-pill text-bg-secondary section-text p-3">API Integration</span>
           </h2>
         </div>
       </div>
