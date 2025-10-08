@@ -3,7 +3,7 @@ import Social from "../Social/Social";
 
 function Footer() {
   return (
-    <div className="footer d-flex my-5 align-items-end">
+    <footer className="footer d-flex my-5 align-items-end">
       <div className="left-div">
         <div className="d-flex flex-column">
           <a class="navbar-brand" href="#">
@@ -24,7 +24,7 @@ function Footer() {
       <div className="right-div ms-auto">
         <Social />
       </div>
-    </div>
+    </footer>
   );
 }
 
