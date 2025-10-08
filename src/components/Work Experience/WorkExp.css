@@ -1,0 +1,14 @@
+.job-title{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.company{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.skills{
+    word-spacing: 10%;
+}

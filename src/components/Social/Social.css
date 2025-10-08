@@ -1,0 +1,6 @@
+.social a {
+    color: #000;
+    transition: all 0.5s ease;
+    font-size: 2rem;
+    padding: 2rem;
+}

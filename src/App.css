@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-heading,
+.section-text{
+    font-family: "Ubuntu Sans Mono", monospace;
+}
+
+.section-heading{
+    font-weight: 500;
+    font-size: 5rem;
+    text-transform: lowercase;
+}
+
+section{
+    margin: 6rem 0;
+}
+
+.section-text{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0;
+}
