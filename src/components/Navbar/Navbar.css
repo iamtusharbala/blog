@@ -1,0 +1,15 @@
+.navbar-brand {
+  color: #ff0404 !important;
+  font-size: 4rem !important;
+  font-weight: bold !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav li {
+    padding: 1.5rem;
+}
+
+.navbar-nav li a {
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-weight: 600;
+}
