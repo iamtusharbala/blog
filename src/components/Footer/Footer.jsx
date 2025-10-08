@@ -10,6 +10,7 @@ function Footer() {
             tbk.
           </a>
           <span className="section-text">MIT Licence 2025</span>
+          <a className="section-text" href="https://github.com/iamtusharbala/blog" target="_blank">Repo &#8599;</a>
         </div>
       </div>
       <div className="right-div ms-auto">
