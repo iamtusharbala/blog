@@ -8,15 +8,17 @@ function Social() {
         <a
           href="https://www.linkedin.com/in/tushar-balakrishnan/"
           target="_blank"
+          aria-label="LinkedIn"
           rel="noopener noreferrer"
         >
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
       </div>
-       <div className="instagram">
+      <div className="instagram">
         <a
           href="https://www.instagram.com/iam_tusharbala/"
           target="_blank"
+          aria-label="Instagram"
           rel="noopener noreferrer"
         >
           <i className="fa-brands fa-instagram"></i>
@@ -26,6 +28,7 @@ function Social() {
         <a
           href="https://github.com/iamtusharbala"
           target="_blank"
+          aria-label="GitHub"
           rel="noopener noreferrer"
         >
           <i className="fa-brands fa-github"></i>
@@ -35,6 +38,7 @@ function Social() {
         <a
           href="https://www.youtube.com/@iam_tusharbala"
           target="_blank"
+          aria-label="YouTube"
           rel="noopener noreferrer"
         >
           <i class="fa-brands fa-youtube"></i>
@@ -44,12 +48,12 @@ function Social() {
         <a
           href="https://twitter.com/iam_tusharbala"
           target="_blank"
+          aria-label="Twitter"
           rel="noopener noreferrer"
         >
           <i class="fa-brands fa-x-twitter"></i>
         </a>
       </div>
-     
     </div>
   );
 }

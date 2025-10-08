@@ -19,7 +19,7 @@ function About() {
         </p>
       </div>
       <div className="col-lg-4">
-        <img src={img} class="img-fluid" />
+        <img src={img} class="img-fluid" alt="Tushar Image" />
       </div>
       </div>
     </section>
