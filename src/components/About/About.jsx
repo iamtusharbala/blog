@@ -9,7 +9,7 @@ function About() {
         <div className="col-lg-8 d-flex flex-column align-items-start justify-content-end">
         <h2 className="text-start section-heading">About</h2>
         <h1 className="text-start section-text">
-          I'm Tushar Balakrishnan, a <span className="bold">ServiceNow Developer</span> dedicated to creating
+          I'm <span className="bold">Tushar Balakrishnan</span>, a <span className="bold">ServiceNow Developer</span> dedicated to creating
           efficient, scalable, and user-focused solutions. 
         </h1>
         <h2 className="text-start section-text">I specialize in
