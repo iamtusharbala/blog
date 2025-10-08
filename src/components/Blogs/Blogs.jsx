@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Blogs() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@iam_tusharbala"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setPosts(data.items);
+      })
+      .catch((error) => console.error("Error fetching Medium posts:", error));
+  }, []);
+
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
   return (
     <section className="blogs d-flex" id="blogs">
       <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
-        <p class="text-start section-heading">blogs</p>
+        <p className="text-start section-heading">blogs</p>
         <ul>
-          <li className="section-text">
-            Overcoming the Foundations: Understanding Client-Server Architecture
-            -{" "}
-            <a
-              className="bold"
-              href="https://medium.com/@iam_tusharbala/overcoming-the-foundations-understanding-client-server-architecture-bd92d1a1992f"
-              target="_blank"
-            >
-              Read Now &#8599;
-            </a>
-          </li>
+          {posts.map((post) => (
+            <li className="section-text" key={post.guid}>
+              {post.title} -
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                &nbsp;Read Now &#8599;
+              </a>
+              <p>{formatDate(post.pubDate)}</p>
+              <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
+            </li>
+          ))}
         </ul>
       </div>
     </section>
