@@ -1,16 +1,65 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tushar Balakrishnan | ServiceNow Developer Portfolio
 
-Currently, two official plugins are available:
+This is a personal portfolio website for Tushar Balakrishnan, a ServiceNow Developer specializing in ITSM, HRSD, custom applications, and platform automation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Modern React-based SPA
+- Responsive design with Bootstrap 5
+- Font Awesome and Google Fonts integration
+- Sections: About, Work Experience, Skills, Certifications, Blogs, and more
+- Downloadable resume
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js (v16 or higher recommended)
+- npm (v8 or higher)
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone the repository:
+	```sh
+	git clone https://github.com/iamtusharbala/blog.git
+	cd blog
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
+3. Start the development server:
+	```sh
+	npm run dev
+	```
+4. Open your browser at `http://localhost:5173` (or as indicated in the terminal).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Build for Production
+```sh
+npm run build
+```
+The output will be in the `dist/` directory.
+
+## Deployment
+This site is designed for static hosting and is deployed on Netlify.
+
+## Folder Structure
+```
+blog/
+├── public/                # Static assets (resume, images, etc.)
+├── src/                   # Source code
+│   ├── components/        # React components (About, Blogs, Skills, etc.)
+│   ├── assets/            # Images and other assets
+│   ├── App.jsx            # Main app component
+│   └── main.jsx           # Entry point
+├── index.html             # Main HTML file
+├── package.json           # Project metadata and scripts
+├── vite.config.js         # Vite configuration
+└── README.md              # Project documentation
+```
+
+## Author
+**Tushar Balakrishnan**
+- [LinkedIn](https://www.linkedin.com/in/iamtusharbala/)
+- [Portfolio](https://iamtusharbala.netlify.app/)
+
+## License
+This project is licensed under the MIT License.
