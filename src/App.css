@@ -26,3 +26,28 @@ section{
     font-size: 1.2rem;
     margin: 0;
 }
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .section-heading{
+    font-size: 3.25rem !important;
+  }
+  section{
+    margin: 4rem 0;
+  }
+  .section-text{
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-heading{
+    font-size: 2.25rem !important;
+  }
+  section{
+    margin: 3rem 0;
+  }
+  .section-text{
+    font-size: 1rem;
+  }
+}

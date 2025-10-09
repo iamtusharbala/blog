@@ -14,6 +14,25 @@
     font-weight: 600;
 }
 
+/* Responsive navbar sizing */
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 3rem !important;
+  }
+  .navbar-nav li {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 2.25rem !important;
+  }
+  .navbar-nav li {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
 /* theme toggle icon should follow theme color; force white in dark mode */
 .theme-toggle i {
   color: var(--color-text) !important;

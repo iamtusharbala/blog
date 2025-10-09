@@ -47,7 +47,7 @@ function Navbar({ theme = 'light', onToggleTheme }) {
               </a>
             </li>
           </ul>
-          <div class="ms-auto d-flex align-items-center">
+          <div class="ms-auto d-none d-lg-flex align-items-center">
             <button
               type="button"
               class="p-0 border-0 bg-transparent d-flex align-items-center justify-content-center theme-toggle"
