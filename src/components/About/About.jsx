@@ -22,23 +22,27 @@ function About() {
           <a 
             href="/Tushar Resume.pdf" 
             download={`Tushar_Balakrishnan_Resume_${new Date().getFullYear()}.pdf`}
-            className="btn btn-outline-primary btn-lg me-3"
+            className="btn btn-outline-primary btn-lg me-3 resume-contrast-btn"
             style={{
               fontFamily: '"Ubuntu Sans Mono", monospace',
-              fontWeight: '500',
+              fontWeight: '600',
               padding: '0.75rem 1.5rem',
-              borderColor: 'var(--color-accent)',
-              color: 'var(--color-accent)',
+              borderColor: '#212529', // high-contrast border
+              color: '#212529', // high-contrast text
+              backgroundColor: '#fff',
               borderRadius: '25px',
-              transition: 'all 0.3s ease'
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 8px 0 rgba(0,0,0,0.04)'
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = 'var(--color-accent)';
-              e.target.style.color = '#ffffff';
+              e.target.style.backgroundColor = '#212529';
+              e.target.style.color = '#fff';
+              e.target.style.borderColor = '#212529';
             }}
             onMouseLeave={(e) => {
-              e.target.style.backgroundColor = 'transparent';
-              e.target.style.color = 'var(--color-accent)';
+              e.target.style.backgroundColor = '#fff';
+              e.target.style.color = '#212529';
+              e.target.style.borderColor = '#212529';
             }}
           >
             <i className="fas fa-download me-2"></i>
