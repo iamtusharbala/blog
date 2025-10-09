@@ -14,8 +14,8 @@
 /* dark theme */
 [data-theme="dark"] {
   --color-bg: #0b0b0c;
-  --color-text: #eaeaea;
-  --color-muted: #b3b3b3;
+  --color-text: #f2f2f2; /* brighter for better contrast */
+  --color-muted: #c7c7c7; /* slightly brighter muted text */
   --color-accent: #ff6363;
   --color-surface: #141417;
 }
@@ -24,12 +24,31 @@ html, body, #root {
   background-color: var(--color-bg);
   color: var(--color-text);
   min-height: 100%;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* sensible defaults for anchors */
 a {
   color: var(--color-text);
   text-decoration-color: var(--color-muted);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+/* Improve readability for body copy in dark mode */
+[data-theme="dark"] .section-text {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] p, [data-theme="dark"] li {
+  color: var(--color-text);
 }
 
 /* navbar tweaks to reflect theme */
