@@ -21,8 +21,8 @@ function App() {
       setTheme(stored);
       return;
     }
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
+    // Default to light when no stored preference
+    setTheme('light');
   }, []);
 
   // apply theme to document root and persist
