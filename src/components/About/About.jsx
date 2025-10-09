@@ -20,7 +20,7 @@ function About() {
           into a well-rounded and impactful software professional.</h2>
       </div>
       <div className="col-lg-4 mt-5">
-        <img src={img} class="img-fluid" alt="Tushar Image" />
+        <img src={img} className="img-fluid" alt="Tushar Image" />
       </div>
       </div>
     </section>

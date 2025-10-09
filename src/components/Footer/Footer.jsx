@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer d-lg-flex my-5 align-items-end">
       <div className="left-div">
         <div className="d-lg-flex flex-column">
-          <a class="navbar-brand" href="#">
+          <a className="navbar-brand" href="#">
             tbk.
           </a>
           <div className="low-footer d-flex flex-row">

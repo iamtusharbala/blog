@@ -4,7 +4,7 @@ function Certs() {
   return (
     <section className="certs d-flex" id="certs">
       <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
-        <p class="text-start section-heading">Certs</p>
+        <p className="text-start section-heading">Certs</p>
         <ul>
           <li className="section-text">
             ServiceNow Certified System Administrator.
