@@ -1,4 +1,5 @@
 import Social from "../Social/Social";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -11,9 +12,10 @@ function Footer() {
           <div className="low-footer d-flex flex-row">
             <span className="section-text">MIT Licence 2025</span>
             <a
-              className="section-text ms-3"
+              className="section-text ms-3 repo-link"
               href="https://github.com/iamtusharbala/blog"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Repo &#8599;
             </a>

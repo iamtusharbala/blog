@@ -1,0 +1,12 @@
+.repo-link {
+  color: var(--color-text);
+  text-decoration-color: var(--color-muted);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: all 0.3s ease;
+}
+
+.repo-link:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
