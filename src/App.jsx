@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, lazy, Suspense } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
@@ -6,10 +6,12 @@ import Developer from "./components/DDD section/Developer";
 import WorkExp from "./components/Work Experience/WorkExp";
 import Skills from "./components/Skills/Skills";
 import Certs from "./components/Certs/Certs";
-import Blogs from "./components/Blogs/Blogs";
-import Crafted from "./components/Crafted/Crafted";
 import Footer from "./components/Footer/Footer";
 import Social from "./components/Social/Social";
+
+// Lazy load non-critical components
+const LazyBlogs = lazy(() => import("./components/Blogs/Blogs"));
+const LazyCrafted = lazy(() => import("./components/Crafted/Crafted"));
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -38,8 +40,12 @@ function App() {
         <WorkExp />
         <Skills />
         <Certs />
-        <Blogs />
-        <Crafted />
+        <Suspense fallback={<div className="text-center my-5">Loading blogs...</div>}>
+          <LazyBlogs />
+        </Suspense>
+        <Suspense fallback={<div className="text-center my-5">Loading...</div>}>
+          <LazyCrafted />
+        </Suspense>
         <Footer />
       </div>
     </div>

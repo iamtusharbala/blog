@@ -19,7 +19,7 @@ function About() {
           into a well-rounded and impactful software professional.</h2>
       </div>
       <div className="col-lg-4 mt-5 text-center">
-        <img src={img} className="img-fluid" alt="Tushar Image" />
+        <img src={img} className="img-fluid" alt="Tushar Image" loading="lazy" />
       </div>
       </div>
     </section>
