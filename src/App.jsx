@@ -14,22 +14,16 @@ import Social from "./components/Social/Social";
 function App() {
   const [theme, setTheme] = useState("light");
 
-  // initialize theme from localStorage or prefers-color-scheme
+  // initialize theme - default to light theme
   useEffect(() => {
-    const stored = typeof window !== 'undefined' ? window.localStorage.getItem('theme') : null;
-    if (stored === 'light' || stored === 'dark') {
-      setTheme(stored);
-      return;
-    }
-    // Default to light when no stored preference
+    // Default to light theme, no localStorage persistence
     setTheme('light');
   }, []);
 
-  // apply theme to document root and persist
+  // apply theme to document root
   useEffect(() => {
     const root = document.documentElement;
     root.setAttribute('data-theme', theme);
-    window.localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = useMemo(() => () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark')), []);
