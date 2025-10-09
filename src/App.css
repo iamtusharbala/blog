@@ -6,7 +6,6 @@
 .section-heading,
 .section-text{
     font-family: "Ubuntu Sans Mono", monospace;
-    line-height: 1.8rem;
     margin-bottom: 5rem;
 }
 
@@ -14,6 +13,7 @@
     font-weight: 500 !important;
     font-size: 5rem !important;
     text-transform: lowercase;
+    line-height: normal!important;
 }
 
 section{
