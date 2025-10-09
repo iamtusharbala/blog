@@ -1,4 +1,3 @@
-import React from 'react'
 import './Crafted.css'
 
 function Crafted() {

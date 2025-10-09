@@ -1,10 +1,9 @@
-import React from "react";
 import "./About.css";
 import img from "../../assets/images/IMG_3762.webp";
 
 function About() {
   return (
-    <section className="about d-flex justify-content-evenly">
+    <section className="about d-flex justify-content-evenly" id="about">
       <div className="row w-100">
         <div className="col-lg-8 d-flex flex-column align-items-start justify-content-end">
         <h2 className="section-heading">About</h2>

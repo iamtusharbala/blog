@@ -1,4 +1,3 @@
-import React from "react";
 import "./WorkExp.css";
 
 function WorkExp() {
