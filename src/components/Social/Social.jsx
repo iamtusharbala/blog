@@ -11,7 +11,7 @@ function Social() {
         target="_blank"
         aria-label="LinkedIn"
         rel="noopener noreferrer"
-        className="text-dark fs-3 fs-sm-2 text-decoration-none hover:text-primary"
+        className="fs-3 fs-sm-2 text-decoration-none"
       >
         <i className="fa-brands fa-linkedin-in"></i>
       </a>
@@ -21,7 +21,7 @@ function Social() {
         target="_blank"
         aria-label="Instagram"
         rel="noopener noreferrer"
-        className="text-dark fs-3 fs-sm-2 text-decoration-none hover:text-primary"
+        className="fs-3 fs-sm-2 text-decoration-none"
       >
         <i className="fa-brands fa-instagram"></i>
       </a>
@@ -31,7 +31,7 @@ function Social() {
         target="_blank"
         aria-label="GitHub"
         rel="noopener noreferrer"
-        className="text-dark fs-3 fs-sm-2 text-decoration-none hover:text-primary"
+        className="fs-3 fs-sm-2 text-decoration-none"
       >
         <i className="fa-brands fa-github"></i>
       </a>
@@ -41,7 +41,7 @@ function Social() {
         target="_blank"
         aria-label="YouTube"
         rel="noopener noreferrer"
-        className="text-dark fs-3 fs-sm-2 text-decoration-none hover:text-primary"
+        className="fs-3 fs-sm-2 text-decoration-none"
       >
         <i className="fa-brands fa-youtube"></i>
       </a>
@@ -51,7 +51,7 @@ function Social() {
         target="_blank"
         aria-label="Twitter"
         rel="noopener noreferrer"
-        className="text-dark fs-3 fs-sm-2 text-decoration-none hover:text-primary"
+        className="fs-3 fs-sm-2 text-decoration-none"
       >
         <i className="fa-brands fa-x-twitter"></i>
       </a>

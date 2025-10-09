@@ -1,7 +1,44 @@
 :root {
+  /* typography */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #fff;
   font-display: swap;
 
+  /* light theme (default) */
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-muted: #666666;
+  --color-accent: #ff0404; /* matches .navbar-brand */
+  --color-surface: #f5f5f7;
+}
+
+/* dark theme */
+[data-theme="dark"] {
+  --color-bg: #0b0b0c;
+  --color-text: #eaeaea;
+  --color-muted: #b3b3b3;
+  --color-accent: #ff6363;
+  --color-surface: #141417;
+}
+
+html, body, #root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100%;
+}
+
+/* sensible defaults for anchors */
+a {
+  color: var(--color-text);
+  text-decoration-color: var(--color-muted);
+}
+
+/* navbar tweaks to reflect theme */
+.navbar {
+  background-color: var(--navbar-bg);
+  backdrop-filter: saturate(120%) blur(8px);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+.navbar .nav-link {
+  color: var(--color-text) !important;
 }

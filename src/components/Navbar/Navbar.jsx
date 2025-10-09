@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ theme = 'light', onToggleTheme }) {
   return (
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -47,6 +47,21 @@ function Navbar() {
               </a>
             </li>
           </ul>
+          <div class="ms-auto d-flex align-items-center">
+            <button
+              type="button"
+              class="p-0 border-0 bg-transparent d-flex align-items-center justify-content-center theme-toggle"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+              onClick={onToggleTheme}
+            >
+              {theme === 'dark' ? (
+                <i className="fa-solid fa-sun fa-xl"></i>
+              ) : (
+                <i className="fa-solid fa-moon fa-xl"></i>
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </nav>

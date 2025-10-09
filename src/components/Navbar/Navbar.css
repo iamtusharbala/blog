@@ -13,3 +13,12 @@
     font-family: "Ubuntu Sans Mono", monospace;
     font-weight: 600;
 }
+
+/* theme toggle icon should follow theme color; force white in dark mode */
+.theme-toggle i {
+  color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .theme-toggle i {
+  color: #ffffff !important;
+}

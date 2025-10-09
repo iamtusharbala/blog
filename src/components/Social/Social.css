@@ -1,7 +1,11 @@
 .social a {
-    color: #000;
+    color: var(--color-text);
     transition: all 0.5s ease;
     font-size: 2rem;
     padding: 2rem;
     height: 2rem;
+}
+
+[data-theme="dark"] .social a {
+    color: #ffffff;
 }
