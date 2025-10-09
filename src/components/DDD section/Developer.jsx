@@ -6,9 +6,13 @@ function Developer() {
       {/* The main heading container */}
       <p
         className="text-center section-heading-ddd mb-0"
-        style={{ wordBreak: "break-word", overflowWrap: "break-word" }}
+        style={{ 
+          wordBreak: "break-word", 
+          overflowWrap: "break-word",
+          hyphens: "auto"
+        }}
       >
-        <span className="fs-1 fs-sm-3">
+        <span className="fs-1">
           Developer<span className="dot-red">.</span> Dreamer
           <span className="dot-red">.</span> Coder{" "}
           <span className="ddc-code">&lt;/&gt;</span>

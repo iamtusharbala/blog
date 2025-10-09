@@ -2,10 +2,37 @@
     color: #ff0404;
 }
 
-.section-heading-ddd{
+.section-heading-ddd span{
     font-family: "Ubuntu Sans Mono", monospace;
-    font-size: 4rem;
+    font-size: 4rem!important;
     font-weight: 500;
     text-transform: lowercase;
     margin: 0;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 992px) {
+  .section-heading-ddd span {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading-ddd span {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-heading-ddd span {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-heading-ddd span {
+    font-size: 1.75rem !important;
+    line-height: 1.1;
+  }
 }

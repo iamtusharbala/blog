@@ -1,34 +1,22 @@
 
+import "./Skills.css";
+
 function Skills() {
   return (
     <section className="skills d-flex" id="skills">
       <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
         <p className="text-start section-heading">Skills</p>
-        <div className="skill-badge d-flex justify-content-evenly align-items-center flex-wrap gap-3">
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">ServiceNow</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">Javascript</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">Angular</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">Node.js</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">Figma</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">React</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">Python</span>
-          </h2>
-          <h2>
-            <span className="badge rounded-pill text-bg-secondary section-text p-3">API Integration</span>
-          </h2>
+        <div className="skills-grid">
+          <span className="skill-tag">ServiceNow</span>
+          <span className="skill-tag">Javascript</span>
+          <span className="skill-tag">Angular</span>
+          <span className="skill-tag">Node.js</span>
+          <span className="skill-tag">Figma</span>
+          <span className="skill-tag">React</span>
+          <span className="skill-tag">Python</span>
+          <span className="skill-tag">API Integration</span>
+          <span className="skill-tag">SQL</span>
+          <span className="skill-tag">Postman</span>
         </div>
       </div>
     </section>
