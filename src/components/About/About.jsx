@@ -19,7 +19,7 @@ function About() {
           to bridge the gap between technology and business needs while growing
           into a well-rounded and impactful software professional.</h2>
       </div>
-      <div className="col-lg-4">
+      <div className="col-lg-4 mt-5">
         <img src={img} class="img-fluid" alt="Tushar Image" />
       </div>
       </div>

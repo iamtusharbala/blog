@@ -5,7 +5,7 @@ function Skills() {
     <section className="skills d-flex" id="skills">
       <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
         <p class="text-start section-heading">Skills</p>
-        <div className="skill-badge d-flex justify-content-evenly flex-wrap gap-3">
+        <div className="skill-badge d-flex justify-content-evenly align-items-center flex-wrap gap-3">
           <h2>
             <span class="badge rounded-pill text-bg-secondary section-text p-3">ServiceNow</span>
           </h2>
