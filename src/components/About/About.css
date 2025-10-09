@@ -2,8 +2,14 @@
   height: 400px;
   width: 400px;
   object-fit: cover;
+  transition: filter 400ms ease-in-out;
 }
 
 .bold{
   font-weight: bold;
+}
+
+/* Make profile image black & white in dark mode */
+[data-theme="dark"] .about img {
+  filter: grayscale(100%);
 }
