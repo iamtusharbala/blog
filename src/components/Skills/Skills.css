@@ -44,7 +44,7 @@
   color: var(--color-text);
   border: 2px solid var(--color-muted);
   border-radius: 25px;
-  font-family: "Ubuntu Sans Mono", monospace;
+  font-family: "Ubuntu Mono", monospace;
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;

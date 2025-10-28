@@ -24,7 +24,7 @@ function About() {
             download={`Tushar_Balakrishnan_Resume_${new Date().getFullYear()}.pdf`}
             className="btn btn-outline-primary btn-lg me-3 resume-contrast-btn"
             style={{
-              fontFamily: '"Ubuntu Sans Mono", monospace',
+              fontFamily: '"Ubuntu Mono", monospace',
               fontWeight: '600',
               padding: '0.75rem 1.5rem',
               borderColor: '#212529', // high-contrast border
