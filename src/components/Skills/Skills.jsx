@@ -16,7 +16,7 @@ function Skills() {
           <span className="skill-tag">Figma</span>
           <span className="skill-tag">React</span>
           <span className="skill-tag">Python</span>
-          <span className="skill-tag">API Integration</span>
+          <span className="skill-tag">API's</span>
           <span className="skill-tag">SQL</span>
           <span className="skill-tag">Postman</span>
         </div>
