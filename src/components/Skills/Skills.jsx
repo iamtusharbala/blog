@@ -11,6 +11,8 @@ function Skills() {
           <span className="skill-tag">Javascript</span>
           <span className="skill-tag">Angular</span>
           <span className="skill-tag">Node.js</span>
+          <span className="skill-tag">Express</span>
+          <span className="skill-tag">Mongo DB</span>
           <span className="skill-tag">Figma</span>
           <span className="skill-tag">React</span>
           <span className="skill-tag">Python</span>
