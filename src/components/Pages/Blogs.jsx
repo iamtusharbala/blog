@@ -52,12 +52,12 @@ function Blogs() {
     <>
       <ul className="p-0">
         {posts.map((post) => (
-          <li className="text-gray-600" key={post.guid}>
+          <li className="text-lg text-gray-600" key={post.guid}>
             {post.title} -
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               &nbsp;Read Now &#8599;
             </a>
-            <p>{formatDate(post.pubDate)}</p>
+            <p className="text-sm mt-2 text-gray-500">{formatDate(post.pubDate)}</p>
             <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
             <hr />
           </li>
