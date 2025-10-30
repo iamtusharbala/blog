@@ -1,0 +1,41 @@
+import { MoveUpRight } from "lucide-react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const RightMenu = () => {
+  const linkClasses = ({ isActive }) =>
+    `no-underline text-xl cursor-pointer transition-colors duration-200 ${
+      isActive ? "text-black font-medium" : "text-gray-500 hover:text-black"
+    }`;
+
+  return (
+    <ul className="menu px-0 my-4 flex flex-col gap-4 justify-center items-end">
+      <NavLink
+        to="https://github.com/iamtusharbala/blog"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkClasses}
+      >
+        <li className="lowercase">
+          <span>
+            repo
+            <MoveUpRight style={{ display: "inline-block" }} />
+          </span>
+        </li>
+      </NavLink>
+      <NavLink to="/rss-feed" className={linkClasses}>
+        <li className="lowercase">
+          <span>
+            rss feed
+            <MoveUpRight style={{ display: "inline-block" }} />
+          </span>
+        </li>
+      </NavLink>
+      <NavLink to="/mit" className={linkClasses}>
+        <li>MIT License 2025</li>
+      </NavLink>
+    </ul>
+  );
+};
+
+export default RightMenu;

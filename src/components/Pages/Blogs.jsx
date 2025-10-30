@@ -6,14 +6,14 @@ function Blogs() {
 
   useEffect(() => {
     const controller = new AbortController();
-    
+
     fetch(
       "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@iam_tusharbala",
-      { 
+      {
         signal: controller.signal,
         headers: {
-          'Accept': 'application/json',
-        }
+          Accept: "application/json",
+        },
       }
     )
       .then((response) => {
@@ -28,7 +28,7 @@ function Blogs() {
         }
       })
       .catch((error) => {
-        if (error.name !== 'AbortError') {
+        if (error.name !== "AbortError") {
           console.error("Error fetching Medium posts:", error);
           setPosts([]); // Set empty array on error
         }
@@ -45,38 +45,27 @@ function Blogs() {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
   if (loading) {
-    return (
-      <section className="blogs d-flex" id="blogs">
-        <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
-          <p className="text-start section-heading">blogs</p>
-          <div className="text-center my-5">
-            <div className="spinner-border text-primary" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
+    return <span className="visually-hidden">Loading...</span>;
   }
 
   return (
-    <section className="blogs d-flex" id="blogs">
-      <div className="col-lg-12 d-flex flex-column align-items-start justify-content-end">
-        <p className="text-start section-heading">blogs</p>
-        <ul>
+    <div className="mt-4">
+      <div className="">
+        <ul className="p-0">
           {posts.map((post) => (
-            <li className="section-text" key={post.guid}>
+            <li className="text-gray-600" key={post.guid}>
               {post.title} -
               <a href={post.link} target="_blank" rel="noopener noreferrer">
                 &nbsp;Read Now &#8599;
               </a>
               <p>{formatDate(post.pubDate)}</p>
               <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
+              <hr />
             </li>
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }
 
