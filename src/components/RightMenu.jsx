@@ -16,7 +16,7 @@ const RightMenu = () => {
         rel="noopener noreferrer"
         className={linkClasses}
       >
-        <li className="lowercase">
+        <li className="lowercase hover:text-[#3B82F6]">
           <span>
             repo
             <MoveUpRight style={{ display: "inline-block" }} />
@@ -24,14 +24,14 @@ const RightMenu = () => {
         </li>
       </NavLink>
       <NavLink to="/rss-feed" className={linkClasses}>
-        <li className="lowercase">
+        <li className="lowercase hover:text-[#3B82F6]">
           <span>
             rss feed
             <MoveUpRight style={{ display: "inline-block" }} />
           </span>
         </li>
       </NavLink>
-      <li>MIT License 2025</li>
+      <li className="cursor-default">MIT License 2025</li>
     </ul>
   );
 };
