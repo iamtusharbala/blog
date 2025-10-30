@@ -9,12 +9,17 @@ const Navbar = () => {
       <div className="logo-image ml-30">
         <img src={tbkLogo} alt="logo" className="w-20 cursor-pointer" />
       </div>
-      <div className="dark-mode mr-30">
-        {darkMode ? (
-          <Sun className="cursor-pointer" onClick={() => setDarkMode(false)} />
-        ) : (
-          <Moon className="cursor-pointer" onClick={() => setDarkMode(true)} />
-        )}
+      <div className="dark-mode mr-30 p-1 rounded group hover:bg-gray-200 transition-colors">
+        <div
+          className={`theme-toggle ${darkMode ? "dark" : ""}`}
+          role="button"
+          aria-pressed={darkMode}
+          title={darkMode ? "Switch to light" : "Switch to dark"}
+          onClick={() => setDarkMode((s) => !s)}
+        >
+          <Sun className="icon sun" size={25} />
+          <Moon className="icon moon" size={25} />
+        </div>
       </div>
     </div>
   );

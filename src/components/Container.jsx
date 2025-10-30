@@ -30,23 +30,31 @@ const renderPage = (page) => {
 };
 
 const Container = ({ page }) => {
-  const [memoji, setMemoji] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   return (
     <div className="flex flex-col w-lg">
       <div className="name-details">
-        {!memoji ? (
-          <img
-            className="w-20 rounded-full object-fill cursor-pointer"
-            src={tusharImage}
-            onClick={() => setMemoji(true)}
-          />
-        ) : (
-          <img
-            className="w-20 rounded-full object-fill cursor-pointer"
-            src={tusharImageMemoji}
-            onClick={() => setMemoji(false)}
-          />
-        )}
+        <div
+          className={`flip-container ${flipped ? "flipped" : ""}`}
+          onClick={() => setFlipped((s) => !s)}
+          role="button"
+          aria-pressed={flipped}
+          title={flipped ? "Show photo" : "Show memoji"}
+        >
+          <div className="flipper">
+            <img
+              src={tusharImage}
+              alt="Tushar"
+              className="flip-face flip-front w-20 rounded-full object-fill"
+            />
+            <img
+              src={tusharImageMemoji}
+              alt="Memoji of Tushar"
+              className="flip-face flip-back w-20 rounded-full object-fill"
+            />
+          </div>
+        </div>
+
         <p className="text-2xl mt-3 mb-0" style={{ fontWeight: 500 }}>
           Tushar Balakrishnan V
         </p>
