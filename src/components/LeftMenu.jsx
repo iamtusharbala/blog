@@ -18,9 +18,9 @@ const LeftMenu = () => {
       <NavLink to="/skills" className={linkClasses}>
         <li>Skills</li>
       </NavLink>
-      <NavLink to="/projects" className={linkClasses}>
+      {/* <NavLink to="/projects" className={linkClasses}>
         <li>Projects</li>
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/certifications" className={linkClasses}>
         <li>Certifications</li>
       </NavLink>

@@ -32,7 +32,7 @@ const renderPage = (page) => {
 const Container = ({ page }) => {
   const [memoji, setMemoji] = useState(false);
   return (
-    <div className="flex flex-col w-lg scroll-auto overflow-none">
+    <div className="flex flex-col w-lg">
       <div className="name-details">
         {!memoji ? (
           <img
@@ -57,7 +57,7 @@ const Container = ({ page }) => {
           ServiceNow Developer | Infosys
         </p>
       </div>
-      <div className="pages h-3/5 mt-3">{renderPage(page)}</div>
+      <div className="pages h-3/5 mt-2">{renderPage(page)}</div>
     </div>
   );
 };

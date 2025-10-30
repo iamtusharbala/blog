@@ -63,3 +63,16 @@ blog/
 
 ## License
 This project is licensed under the MIT License.
+
+## Note: layout shift fix (Work Experience)
+
+- Issue: when navigating to the "Work Experience" page the center container would shift slightly. This was caused by the browser showing/hiding the vertical scrollbar when page height changed between routes.
+- Fix applied: `src/index.css` now forces a persistent vertical scrollbar to reserve the scrollbar width and avoid re-centering the layout:
+
+	body {
+		overflow-y: scroll;
+	}
+
+- Verification: run the dev server and toggle between `About` and `Work Experience`. The center container should no longer shift when the vertical scrollbar appears or disappears.
+
+- Alternatives: if you prefer not to always show the scrollbar visually, we can implement a small JS solution that measures scrollbar width and applies matching padding-right when the document is scrollable, or use other CSS techniques per-browser. Ask me if you'd like one of those implemented.

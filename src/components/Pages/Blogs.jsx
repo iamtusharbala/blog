@@ -49,23 +49,21 @@ function Blogs() {
   }
 
   return (
-    <div className="mt-4">
-      <div className="">
-        <ul className="p-0">
-          {posts.map((post) => (
-            <li className="text-gray-600" key={post.guid}>
-              {post.title} -
-              <a href={post.link} target="_blank" rel="noopener noreferrer">
-                &nbsp;Read Now &#8599;
-              </a>
-              <p>{formatDate(post.pubDate)}</p>
-              <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
-              <hr />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <>
+      <ul className="p-0">
+        {posts.map((post) => (
+          <li className="text-gray-600" key={post.guid}>
+            {post.title} -
+            <a href={post.link} target="_blank" rel="noopener noreferrer">
+              &nbsp;Read Now &#8599;
+            </a>
+            <p>{formatDate(post.pubDate)}</p>
+            <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
+            <hr />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

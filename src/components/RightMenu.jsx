@@ -31,9 +31,7 @@ const RightMenu = () => {
           </span>
         </li>
       </NavLink>
-      <NavLink to="/mit" className={linkClasses}>
-        <li>MIT License 2025</li>
-      </NavLink>
+      <li>MIT License 2025</li>
     </ul>
   );
 };

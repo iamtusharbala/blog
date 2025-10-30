@@ -9,7 +9,7 @@ const Certifications = () => {
     "The Complete ServiceNow Developer Course - Udemy",
   ];
   return (
-    <div className="flex gap-3 flex-col mt-3">
+    <div className="flex gap-3 flex-col">
       <ul className="p-0">
         {certifications.map((certification, index) => (
           <li key={index} >
