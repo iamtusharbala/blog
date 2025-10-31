@@ -9,7 +9,7 @@ import Message from "./components/Message";
 
 const App = () => {
   return (
-    <div className="h-max w-screen bg-white dark:bg-black container">
+    <div className="h-screen w-screen bg-white dark:bg-black container">
       <Navbar />
       <div className="lg:mx-20 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
         <LeftMenu />
