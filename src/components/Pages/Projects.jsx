@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const Projects = () => {
   const [projectArray, setProjectArray] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const selectedProjects = ["date-buddy", "contact-manager", "Ponman", "blog"];
 
@@ -25,6 +26,8 @@ const Projects = () => {
       setProjectArray(filtered);
     } catch (error) {
       console.error("Error fetching repos:", error);
+    } finally {
+      setLoading(false); // 👈 stop loading once done
     }
   };
 
@@ -32,39 +35,51 @@ const Projects = () => {
     fetchRepos();
   }, []);
   return (
-    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box dark:bg-[##121212] z-10">
-      <ul className="list  rounded-box shadow-md">
-        {projectArray.map((project, index) => (
-          <li className="list-row" key={project.id}>
-            <div className="text-4xl font-thin opacity-30 tabular-nums">
-              {index + 1}
-            </div>
-            <div className="list-col-grow">
-              <div className="text-xl font-semibold">{project.name}</div>
-              <div className="text-sm mt-2 opacity-60">{project.description}</div>
-            </div>
-            <a
-              className="btn btn-square btn-ghost cursor-pointer tooltip tooltip-left"
-              data-tip="go to repo"
-              href={project.html_url}
-              target="_blank"
-            >
-              <Github />
-            </a>
-
-            {project.homepage && (
+    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box dark:bg-[#121212] z-10">
+      {loading ? (
+        <div className="flex justify-center items-center h-40 text-sm opacity-70">
+          <span className="loading loading-dots loading-xl"></span>.
+        </div>
+      ) : projectArray.length > 0 ? (
+        <ul className="list rounded-box shadow-md">
+          {projectArray.map((project, index) => (
+            <li className="list-row" key={project.id}>
+              <div className="text-4xl font-thin opacity-30 tabular-nums">
+                {index + 1}
+              </div>
+              <div className="list-col-grow">
+                <div className="text-xl font-semibold">{project.name}</div>
+                <div className="text-sm mt-2 opacity-60">
+                  {project.description}
+                </div>
+              </div>
               <a
                 className="btn btn-square btn-ghost cursor-pointer tooltip tooltip-left"
-                data-tip="go to live!"
-                href={project.homepage}
+                data-tip="go to repo"
+                href={project.html_url}
                 target="_blank"
               >
-                <Radio />
+                <Github />
               </a>
-            )}
-          </li>
-        ))}
-      </ul>
+
+              {project.homepage && (
+                <a
+                  className="btn btn-square btn-ghost cursor-pointer tooltip tooltip-left"
+                  data-tip="go to live!"
+                  href={project.homepage}
+                  target="_blank"
+                >
+                  <Radio />
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="flex justify-center items-center h-40 text-sm opacity-60">
+          No projects found.
+        </div>
+      )}
     </div>
   );
 };
