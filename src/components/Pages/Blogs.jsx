@@ -54,10 +54,10 @@ function Blogs() {
         {posts.map((post) => (
           <li className="text-lg text-gray-600" key={post.guid}>
             {post.title} -
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
+            <a href={post.link} target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:underline">
               &nbsp;Read Now &#8599;
             </a>
-            <p className="text-sm mt-2 text-gray-500">{formatDate(post.pubDate)}</p>
+            <p className="text-xs my-4 text-gray-500">{formatDate(post.pubDate)}</p>
             <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
             <hr />
           </li>

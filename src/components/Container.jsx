@@ -45,12 +45,12 @@ const Container = ({ page }) => {
             <img
               src={tusharImage}
               alt="Tushar"
-              className="flip-face flip-front w-20 rounded-full object-fill"
+              className="flip-face flip-front w-20 rounded-full object-fill cursor-pointer"
             />
             <img
               src={tusharImageMemoji}
               alt="Memoji of Tushar"
-              className="flip-face flip-back w-20 rounded-full object-fill"
+              className="flip-face flip-back w-20 rounded-full object-fill cursor-pointer"
             />
           </div>
         </div>
@@ -65,7 +65,7 @@ const Container = ({ page }) => {
           ServiceNow Developer | Infosys
         </p>
       </div>
-      <div className="pages h-3/5 mt-2">{renderPage(page)}</div>
+      <div className="pages h-3/5 mt-8">{renderPage(page)}</div>
     </div>
   );
 };

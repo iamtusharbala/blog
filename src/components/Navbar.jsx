@@ -6,10 +6,10 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="mx-auto py-3 lg:flex justify-between items-center h-1/6">
-      <div className="logo-image lg:ml-20 text-left">
+      <div className="logo-image lg:ml-45 text-left">
         <img src={tbkLogo} alt="logo" className="w-20 cursor-pointer" />
       </div>
-      <div className="dark-mode md:mr-20 p-1 rounded group hover:bg-gray-200 transition-colors hidden xl:block">
+      <div className="dark-mode md:mr-45 p-1 rounded group hover:bg-gray-200 transition-colors hidden xl:block">
         <div
           className={`theme-toggle ${darkMode ? "dark" : ""}`}
           role="button"

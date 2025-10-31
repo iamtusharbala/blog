@@ -9,9 +9,9 @@ import Message from "./components/Message";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen bg-white dark:bg-black container">
+    <div className="h-screen w-screen bg-white @container px-4 mx-auto bs-sm:max-w-bs-sm bs-md:max-w-bs-md bs-lg:max-w-bs-lg bs-xl:max-w-bs-xl bs-xxl:max-w-bs-xxl">
       <Navbar />
-      <div className="lg:mx-20 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
+      <div className="lg:mx-45 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
         <LeftMenu />
         <Routes>
           <Route path="/" element={<Container page="about" />} />

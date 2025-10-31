@@ -9,7 +9,7 @@ const RightMenu = () => {
     }`;
 
   return (
-    <ul className="menu px-0 my-4 hidden xl:flex flex-col gap-4 justify-center items-end">
+    <ul className="menu px-0 my-4 hidden xl:flex flex-col gap-6 justify-center items-end">
       <NavLink
         to="https://github.com/iamtusharbala/blog"
         target="_blank"

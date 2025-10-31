@@ -6,8 +6,8 @@ const Brand = () => {
   return (
     <>
       <div className="colors">
-        <p className="text-xl">Colors</p>
-        <div className="flex gap-3">
+        <p className="text-xl mb-4">Colors</p>
+        <div className="flex gap-6">
           {colors.map((color, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
@@ -21,12 +21,12 @@ const Brand = () => {
           ))}
         </div>
       </div>
-      <div className="font mt-2">
-        <p className="text-xl">Font Family</p>
+      <div className="font mt-10">
+        <p className="text-xl mb-4">Font Family</p>
         <span className="text-lg jetbrains-mono-font">JetBrains Mono</span>
         <span className="text-lg ml-10">Inter</span>
       </div>
-      <div className="build mt-5">
+      <div className="build mt-10">
         <p className="text-lg">Crafted with ❤️ in Kochi, powered by React.</p>
       </div>
     </>

@@ -18,8 +18,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div>
-      <div className="skills-pill flex flex-wrap gap-2 mt-3">
+    <>
+      <div className="skills-pill flex flex-wrap gap-2">
         {skills.map((skill, i) => (
           <span
             key={i}
@@ -29,7 +29,7 @@ const Skills = () => {
           </span>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import { Linkedin, Youtube, Instagram, Github, FileUser } from "lucide-react";
 
 const SocialPill = () => {
   return (
-    <div className="lg:mx-20 h-1/6 z-10 social-icons hidden xl:flex gap-3 justify-end">
+    <div className="lg:mx-45 h-1/6 z-10 social-icons hidden xl:flex gap-3 justify-end">
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
         href="https://www.linkedin.com/in/tushar-balakrishnan/"
@@ -11,7 +11,7 @@ const SocialPill = () => {
         aria-label="LinkedIn"
         rel="noopener noreferrer"
       >
-        <Linkedin className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
+        <Linkedin className=" text-gray-700 group-hover:text-white transition-colors" />
       </a>
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
@@ -20,7 +20,7 @@ const SocialPill = () => {
         aria-label="YouTube"
         rel="noopener noreferrer"
       >
-        <Youtube className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
+        <Youtube className="text-gray-700 group-hover:text-white transition-colors" />
       </a>
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
@@ -29,7 +29,7 @@ const SocialPill = () => {
         aria-label="GitHub"
         rel="noopener noreferrer"
       >
-        <Github className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
+        <Github className="text-gray-700 group-hover:text-white transition-colors" />
       </a>
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
@@ -38,14 +38,14 @@ const SocialPill = () => {
         aria-label="Instagram"
         rel="noopener noreferrer"
       >
-        <Instagram className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
+        <Instagram className="text-gray-700 group-hover:text-white transition-colors" />
       </a>
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
         href="../assets/Tushar Resume.pdf"
         download={`Tushar_Balakrishnan_Resume_${new Date().getFullYear()}.pdf`}
       >
-        <FileUser className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" />
+        <FileUser className="text-gray-700 group-hover:text-white transition-colors" />
       </a>
     </div>
   );

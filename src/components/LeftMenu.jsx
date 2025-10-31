@@ -8,7 +8,7 @@ const LeftMenu = () => {
     }`;
 
   return (
-    <ul className="menu px-0 my-4 xl:flex flex-col gap-4 justify-center hidden">
+    <ul className="menu px-0 my-4 xl:flex flex-col gap-6 justify-center hidden">
       <NavLink to="/about" className={linkClasses}>
         <li>About</li>
       </NavLink>
