@@ -37,7 +37,7 @@ const WorkExp = () => {
               {experience.skills.map((skill, i) => (
                 <span
                   key={i}
-                  className="bg-gray-200 text-sm px-3 py-1 rounded-full cursor-pointer"
+                  className="bg-gray-200 text-sm px-3 py-1 rounded-full cursor-pointer dark:bg-[#757575]"
                 >
                   {skill}
                 </span>
