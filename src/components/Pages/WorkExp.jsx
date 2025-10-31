@@ -23,11 +23,11 @@ const WorkExp = () => {
     <>
       {experiences.map((experience, index) => (
         <div key={index} className="experience my-3">
-          <div className="years text-gray-600 text-sm">
+          <div className="years dark-grey text-sm">
             {experience.startYear} - {experience.endYear || "Present"}
           </div>
           <div className="job-details mt-2">
-            <div className="job-title text-xl font-semibold">
+            <div className="job-title text-xl font-semibold dark:text-white">
               {experience.position} | {experience.company}
             </div>
             <div className="job-description dark-grey mt-2">

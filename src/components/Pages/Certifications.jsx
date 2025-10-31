@@ -13,7 +13,7 @@ const Certifications = () => {
       <ul className="p-0">
         {certifications.map((certification, index) => (
           <li key={index} >
-            <p className="text-lg mt-2 text-gray-600 cursor-pointer">
+            <p className="text-lg mt-2 dark-grey cursor-pointer">
               {index+1}.&nbsp;{certification}
             </p>
           </li>

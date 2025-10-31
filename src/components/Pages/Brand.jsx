@@ -1,6 +1,6 @@
 import React from "react";
 
-const colors = ["#3B82F6", "#8C8C8C", "#D9D9D9", "#000000"];
+const colors = ["#3B82F6", "#757575", "#8C8C8C", "#D9D9D9", "#121212"];
 
 const Brand = () => {
   return (
@@ -14,7 +14,7 @@ const Brand = () => {
                 className="w-15 h-15 rounded-md cursor-pointer border border-gray-300"
                 style={{ backgroundColor: color }}
               ></div>
-              <p className="text-xs mt-2 text-gray-600 dark:text-gray-100 cursor-pointer">
+              <p className="text-xs mt-2 dark-grey dark:text-gray-100 cursor-pointer">
                 {color}
               </p>
             </div>
@@ -23,11 +23,15 @@ const Brand = () => {
       </div>
       <div className="font mt-10">
         <p className="text-xl mb-4 dark:text-gray-100">Font Family</p>
-        <span className="text-lg jetbrains-mono-font dark:text-gray-100">JetBrains Mono</span>
+        <span className="text-lg jetbrains-mono-font dark:text-gray-100">
+          JetBrains Mono
+        </span>
         <span className="text-lg ml-10 dark:text-gray-100">Inter</span>
       </div>
       <div className="build mt-10">
-        <p className="text-lg dark:text-gray-100">Crafted with ❤️ in Kochi, powered by React.</p>
+        <p className="text-lg dark:text-gray-100">
+          Crafted with ❤️ in Kochi, powered by React.
+        </p>
       </div>
     </>
   );

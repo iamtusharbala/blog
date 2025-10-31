@@ -4,9 +4,7 @@ import tbkLogo from "../assets/images/t-logo-transparent.png";
 import tbkLogoWhite from "../assets/images/t-logo-white-transparent.png";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState('dark' ? true : false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -18,9 +16,8 @@ const Navbar = () => {
       root.setAttribute("data-theme", "light");
       root.classList.remove("dark");
     }
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
 
+  }, [darkMode]);
   return (
     <div className="mx-auto py-3 lg:flex justify-between items-center h-1/6">
       <div className="logo-image lg:ml-45 text-left">
