@@ -45,7 +45,7 @@ function Blogs() {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
   if (loading) {
-    return <span className="visually-hidden text-lg text-gray-600">Loading...</span>;
+    return <span className="text-lg mr-3 size-5 animate-spin text-gray-600">Loading...</span>;
   }
 
   return (
