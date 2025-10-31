@@ -45,7 +45,7 @@ function Blogs() {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
   if (loading) {
-    return <span className="text-lg mr-3 size-5 animate-spin dark-grey">Loading...</span>;
+    return <span className="loading loading-dots loading-xl"></span>;
   }
 
   return (
@@ -54,10 +54,17 @@ function Blogs() {
         {posts.map((post) => (
           <li className="text-lg dark-grey" key={post.guid}>
             {post.title} -
-            <a href={post.link} target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:underline">
+            <a
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#3B82F6] hover:underline"
+            >
               &nbsp;Read Now &#8599;
             </a>
-            <p className="text-xs my-4 text-gray-500">{formatDate(post.pubDate)}</p>
+            <p className="text-xs my-4 text-gray-500">
+              {formatDate(post.pubDate)}
+            </p>
             <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
             <hr />
           </li>
