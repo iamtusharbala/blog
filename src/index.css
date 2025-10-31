@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 
 .menu > a {
   text-decoration: none;
@@ -65,31 +67,4 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-.theme-toggle .icon {
-  position: absolute;
-  transition: transform 420ms cubic-bezier(.2,.8,.2,1), opacity 240ms ease;
-  transform-origin: center center;
-  opacity: 1;
-}
-.theme-toggle .sun {
-  transform: rotate(0deg) scale(1);
-  opacity: 1;
-}
-.theme-toggle .moon {
-  transform: rotate(90deg) scale(0.6);
-  opacity: 0;
-}
-.theme-toggle.dark .sun {
-  transform: rotate(-90deg) scale(0.6);
-  opacity: 0;
-}
-.theme-toggle.dark .moon {
-  transform: rotate(0deg) scale(1);
-  opacity: 1;
-}
-
-/* Small color transition for icon color */
-.theme-toggle .icon svg {
-  transition: color 240ms ease, fill 240ms ease;
 }

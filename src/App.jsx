@@ -9,7 +9,7 @@ import Message from "./components/Message";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen bg-white @container px-4 mx-auto bs-sm:max-w-bs-sm bs-md:max-w-bs-md bs-lg:max-w-bs-lg bs-xl:max-w-bs-xl bs-xxl:max-w-bs-xxl">
+    <div className="h-max sm:h-screen w-screen bg-white dark:bg-black @container px-4 mx-auto bs-sm:max-w-bs-sm bs-md:max-w-bs-md bs-lg:max-w-bs-lg bs-xl:max-w-bs-xl bs-xxl:max-w-bs-xxl">
       <Navbar />
       <div className="lg:mx-45 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
         <LeftMenu />
@@ -30,9 +30,9 @@ const App = () => {
           <Route path="/brand" element={<Container page="brand" />} />
         </Routes>
         <RightMenu />
-        <Message />
       </div>
       <SocialPill />
+      <Message />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const LeftMenu = () => {
   const linkClasses = ({ isActive }) =>
     `no-underline text-xl cursor-pointer shrink transition-colors duration-200 ${
-      isActive ? "text-black font-medium" : "text-gray-500 hover:text-black"
+      isActive ? "text-black dark:text-white font-medium" : "text-gray-500 dark:hover:text-white hover:text-black"
     }`;
 
   return (

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const RightMenu = () => {
   const linkClasses = ({ isActive }) =>
-    `no-underline text-xl cursor-pointer transition-colors duration-200 ${
+    `no-underline text-xl cursor-pointer shrink transition-colors duration-200 ${
       isActive ? "text-black font-medium" : "text-gray-500 hover:text-black"
     }`;
 
@@ -31,7 +31,7 @@ const RightMenu = () => {
           </span>
         </li>
       </NavLink>
-      <li className="cursor-default shrink text-gray-500 hover:text-black text-xl">MIT License 2025</li>
+      <li className="cursor-default shrink text-gray-500 hover:text-black dark:hover:text-white text-xl">MIT License 2025</li>
     </ul>
   );
 };

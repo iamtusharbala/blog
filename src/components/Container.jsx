@@ -55,7 +55,7 @@ const Container = ({ page }) => {
           </div>
         </div>
 
-        <p className="text-2xl mt-3 mb-0" style={{ fontWeight: 500 }}>
+        <p className="text-2xl mt-3 mb-0 dark:text-white" style={{ fontWeight: 500 }}>
           Tushar Balakrishnan V
         </p>
         <p
