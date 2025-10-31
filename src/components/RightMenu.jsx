@@ -9,7 +9,7 @@ const RightMenu = () => {
     }`;
 
   return (
-    <ul className="menu px-0 my-4 flex flex-col gap-4 justify-center items-end">
+    <ul className="menu px-0 my-4 hidden xl:flex flex-col gap-4 justify-center items-end">
       <NavLink
         to="https://github.com/iamtusharbala/blog"
         target="_blank"
@@ -31,7 +31,7 @@ const RightMenu = () => {
           </span>
         </li>
       </NavLink>
-      <li className="cursor-default">MIT License 2025</li>
+      <li className="cursor-default shrink text-gray-500 hover:text-black text-xl">MIT License 2025</li>
     </ul>
   );
 };

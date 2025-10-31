@@ -32,7 +32,7 @@ const renderPage = (page) => {
 const Container = ({ page }) => {
   const [flipped, setFlipped] = useState(false);
   return (
-    <div className="flex flex-col w-lg">
+    <div className="flex flex-col 100% xl:w-lg sm:mt-4 xl:mt-0">
       <div className="name-details">
         <div
           className={`flip-container ${flipped ? "flipped" : ""}`}

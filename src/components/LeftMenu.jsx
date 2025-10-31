@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 
 const LeftMenu = () => {
   const linkClasses = ({ isActive }) =>
-    `no-underline text-xl cursor-pointer transition-colors duration-200 ${
+    `no-underline text-xl cursor-pointer shrink transition-colors duration-200 ${
       isActive ? "text-black font-medium" : "text-gray-500 hover:text-black"
     }`;
 
   return (
-    <ul className="menu px-0 my-4 flex flex-col gap-4 justify-center">
+    <ul className="menu px-0 my-4 xl:flex flex-col gap-4 justify-center hidden">
       <NavLink to="/about" className={linkClasses}>
         <li>About</li>
       </NavLink>

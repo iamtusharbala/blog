@@ -5,12 +5,13 @@ import Container from "./components/Container";
 import RightMenu from "./components/RightMenu";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SocialPill from "./components/SocialPill";
+import Message from "./components/Message";
 
 const App = () => {
   return (
-    <div className="h-screen bg-white dark:bg-black">
+    <div className=" bg-white dark:bg-black container">
       <Navbar />
-      <div className="mx-30 h-4/6 flex flex-row justify-between">
+      <div className="lg:mx-20 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
         <LeftMenu />
         <Routes>
           <Route path="/" element={<Container page="about" />} />
@@ -29,10 +30,9 @@ const App = () => {
           <Route path="/brand" element={<Container page="brand" />} />
         </Routes>
         <RightMenu />
+        <Message />
       </div>
-      <div className="h-1/6 mx-30 z-10">
-        <SocialPill />
-      </div>
+      <SocialPill />
     </div>
   );
 };

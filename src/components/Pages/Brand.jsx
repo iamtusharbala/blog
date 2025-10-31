@@ -1,6 +1,6 @@
 import React from "react";
 
-const colors = ["#000000", "#8C8C8C", "#D9D9D9", "#3B82F6"];
+const colors = ["#3B82F6", "#8C8C8C", "#D9D9D9", "#000000"];
 
 const Brand = () => {
   return (

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="about-text">
-        <p className="text-lg dark-grey">
+        <p className="sm:text-sm lg:text-lg dark-grey">
           I'm Tushar Balakrishnan V, a <b>ServiceNow Developer</b> dedicated to creating
           efficient, scalable, and user-focused solutions.<br/> <br /> I specialize in
           leveraging the ServiceNow platform to streamline workflows, automate
