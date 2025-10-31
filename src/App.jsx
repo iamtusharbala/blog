@@ -6,6 +6,7 @@ import RightMenu from "./components/RightMenu";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SocialPill from "./components/SocialPill";
 import Message from "./components/Message";
+import GifImage from "./components/GifImage";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       </div>
       <SocialPill />
       <Message />
+      <GifImage/>
     </div>
   );
 };
