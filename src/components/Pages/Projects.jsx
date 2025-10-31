@@ -12,7 +12,7 @@ const Projects = () => {
         "https://api.github.com/users/iamtusharbala/repos?sort=created&direction=desc",
         {
           headers: {
-            Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+            Authorization: `token ${process.env.GITHUB_TOKEN}`,
           },
         }
       );
