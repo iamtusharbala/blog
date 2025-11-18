@@ -1,62 +1,71 @@
-:root {
-  /* typography */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-display: swap;
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-  /* light theme (default) */
-  --color-bg: #ffffff;
-  --color-text: #111111;
-  --color-muted: #666666;
-  --color-accent: #ff0404; /* matches .navbar-brand */
-  --color-surface: #f5f5f7;
+
+.menu > a {
+  text-decoration: none;
 }
 
-/* dark theme */
-[data-theme="dark"] {
-  --color-bg: #0b0b0c;
-  --color-text: #f2f2f2; /* brighter for better contrast */
-  --color-muted: #c7c7c7; /* slightly brighter muted text */
-  --color-accent: #ff6363;
-  --color-surface: #141417;
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-html, body, #root {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100%;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+.light-grey {
+  color: #d9d9d9;
 }
 
-/* sensible defaults for anchors */
-a {
-  color: var(--color-text);
-  text-decoration-color: var(--color-muted);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+.dark-grey {
+  color: #757575;
 }
 
-a:hover {
-  color: var(--color-accent);
-  text-decoration-color: var(--color-accent);
+.jetbrains-mono-font {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
-/* Improve readability for body copy in dark mode */
-[data-theme="dark"] .section-text {
-  color: var(--color-text);
+/* Flip card for avatar -> memoji */
+.flip-container {
+  perspective: 1000px; /* Enable 3D space */
+  display: inline-block;
+}
+.flipper {
+  position: relative;
+  width: 5rem; /* matches w-20 (~80px). Keep in sync with Tailwind w-20 */
+  height: 5rem;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-container.flipped .flipper {
+  transform: rotateY(180deg); /* inward flip */
+}
+.flip-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-front {
+  transform: rotateY(0deg);
+}
+.flip-back {
+  transform: rotateY(180deg);
 }
 
-[data-theme="dark"] p, [data-theme="dark"] li {
-  color: var(--color-text);
-}
-
-/* navbar tweaks to reflect theme */
-.navbar {
-  background-color: var(--color-bg);
-  backdrop-filter: saturate(120%) blur(8px);
-}
-
-.navbar .nav-link {
-  color: var(--color-text) !important;
+/* Theme toggle (sun <-> moon) animation */
+.theme-toggle {
+  position: relative;
+  width: 2rem; /* icon container */
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
