@@ -10,11 +10,11 @@ const Certifications = () => {
   ];
   return (
     <div className="flex gap-3 flex-col">
-      <ul className="p-0">
+      <ul className="p-0 mt-5">
         {certifications.map((certification, index) => (
-          <li key={index} >
-            <p className="text-lg mt-2 dark-grey cursor-pointer">
-              {index+1}.&nbsp;{certification}
+          <li key={index}>
+            <p className="mt-2 dark-grey cursor-pointer text-sm leading-relaxed opacity-60">
+              {index + 1}.&nbsp;{certification}
             </p>
           </li>
         ))}

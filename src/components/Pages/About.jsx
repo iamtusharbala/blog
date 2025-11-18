@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="flex flex-col gap-3 max-w-full overflow-hidden wrap-break-word text-ellipsis">
-      <div className="about-text ">
+      <div className="about-text">
         <p className="sm:text-sm lg:text-lg dark-grey">
           I'm Tushar Balakrishnan V, a <b>ServiceNow Developer</b> dedicated to
           creating efficient, scalable, and user-focused solutions.

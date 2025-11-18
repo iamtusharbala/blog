@@ -50,23 +50,21 @@ function Blogs() {
 
   return (
     <>
-      <ul className="p-0">
+      <ul className="p-0 mt-5">
         {posts.map((post) => (
-          <li className="text-lg dark-grey" key={post.guid}>
-            {post.title} -
+          <li className="text-sm leading-relaxed opacity-60" key={post.guid}>
+            {post.title} -&nbsp;
             <a
+              className="after:content-['_↗'] hover:text-[#3B82F6]"
               href={post.link}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#3B82F6] hover:underline"
             >
-              &nbsp;Read Now &#8599;
+              Read Now
             </a>
-            <p className="text-xs my-4 text-gray-500">
+            <p className="text-sm mb-4 text-black dark:text-gray-200">
               {formatDate(post.pubDate)}
             </p>
             <div dangerouslySetInnerHTML={{ __html: post.contentSnippet }} />
-            <hr />
           </li>
         ))}
       </ul>

@@ -3,7 +3,7 @@ import { Linkedin, Youtube, Instagram, Github, FileUser } from "lucide-react";
 
 const SocialPill = () => {
   return (
-    <div className="lg:mx-45 h-1/6 z-10 social-icons hidden xl:flex gap-3 justify-end">
+    <div className="lg:mx-45 h-1/6 z-10 social-icons hidden xl:flex gap-3 justify-between">
       <a
         className="p-2 cursor-pointer rounded group hover:bg-[#3B82F6] transition-colors"
         href="https://www.linkedin.com/in/tushar-balakrishnan/"

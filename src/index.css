@@ -2,7 +2,6 @@
 @plugin "daisyui";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-
 .menu > a {
   text-decoration: none;
 }
@@ -11,61 +10,4 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-}
-
-.light-grey {
-  color: #d9d9d9;
-}
-
-.dark-grey {
-  color: #757575;
-}
-
-.jetbrains-mono-font {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Flip card for avatar -> memoji */
-.flip-container {
-  perspective: 1000px; /* Enable 3D space */
-  display: inline-block;
-}
-.flipper {
-  position: relative;
-  width: 5rem; /* matches w-20 (~80px). Keep in sync with Tailwind w-20 */
-  height: 5rem;
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
-.flip-container.flipped .flipper {
-  transform: rotateY(180deg); /* inward flip */
-}
-.flip-face {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.flip-front {
-  transform: rotateY(0deg);
-}
-.flip-back {
-  transform: rotateY(180deg);
-}
-
-/* Theme toggle (sun <-> moon) animation */
-.theme-toggle {
-  position: relative;
-  width: 2rem; /* icon container */
-  height: 2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
