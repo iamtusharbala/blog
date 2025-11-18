@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tusharImage from "../assets/images/IMG_3762.webp";
 import tusharImageMemoji from "../assets/images/memoji.PNG";
 import About from "./Pages/About";
@@ -7,68 +7,101 @@ import Skills from "./Pages/Skills";
 import Projects from "./Pages/Projects";
 import Certifications from "./Pages/Certifications";
 import Blogs from "./Pages/Blogs";
-import Brand from "./Pages/Brand";
+import SocialPill from "./SocialPill";
+import { Moon, Sun } from "lucide-react";
 
-const renderPage = (page) => {
-  switch (page) {
-    case "/":
-    case "about":
-      return <About />;
-    case "work-experience":
-      return <WorkExp />;
-    case "skills":
-      return <Skills />;
-    case "projects":
-      return <Projects />;
-    case "certifications":
-      return <Certifications />;
-    case "blogs":
-      return <Blogs />;
-    case "brand":
-      return <Brand />;
-  }
-};
+const Container = () => {
+  const [darkMode, setDarkMode] = useState("dark" ? true : false);
 
-const Container = ({ page }) => {
-  const [flipped, setFlipped] = useState(false);
+  useEffect(() => {
+    const root = document.documentElement;
+    if (darkMode) {
+      root.setAttribute("data-theme", "dark"); //default as dark
+    } else {
+      root.setAttribute("data-theme", "light");
+    }
+  }, [darkMode]);
   return (
-    <div className="flex flex-col 100% xl:w-lg sm:mt-4 xl:mt-0">
-      <div className="name-details">
-        <div
-          className={`flip-container ${flipped ? "flipped" : ""}`}
-          onClick={() => setFlipped((s) => !s)}
-          role="button"
-          aria-pressed={flipped}
-          title={flipped ? "Show photo" : "Show memoji"}
-        >
-          <div className="flipper">
-            <img
-              src={tusharImage}
-              alt="Tushar"
-              className="flip-face flip-front w-20 rounded-full object-fill cursor-pointer"
-            />
-            <img
-              src={tusharImageMemoji}
-              alt="Memoji of Tushar"
-              className="flip-face flip-back w-20 rounded-full object-fill cursor-pointer"
-            />
+    <div className="w-full min-h-dvh max-w-[600px] px-4 md:px-0 pt-30 pb-14 mx-auto flex flex-col gap-14 ">
+      <div className="name">
+        <div className="first-row flex justify-between">
+          <div className="name-row">
+            <strong className="text-xl hover:text-gray-300 cursor-pointer">
+              Tushar Balakrishnan V
+            </strong>
+          </div>
+          <div className="toggle-dark">
+            <div className="dark-mode p-1 rounded group transition-colors block cursor-pointer">
+              <div
+                className={`theme-toggle ${darkMode ? "dark" : ""}`}
+                role="button"
+                aria-pressed={darkMode}
+                title={darkMode ? "Switch to light" : "Switch to dark"}
+                onClick={() => setDarkMode((s) => !s)}
+              >
+                {darkMode ? (
+                  <Sun size={25} className="icon sun text-yellow-400" />
+                ) : (
+                  <Moon size={25} className="icon moon text-gray-800" />
+                )}
+              </div>
+            </div>
           </div>
         </div>
-
-        <p
-          className="text-xl mt-3 mb-0 dark:text-white"
-          style={{ fontWeight: 500 }}
-        >
-          Tushar Balakrishnan V
-        </p>
-        <p
-          className="text-sm jetbrains-mono-font dark-grey dark:text-[#d9d9d9]"
-          style={{ fontStyle: "normal", letterSpacing: "1px" }}
-        >
-          ServiceNow Developer | Infosys
+        <p className="text-md font-light">
+          ServiceNow Developer |{" "}
+          <a
+            className="after:content-['_↗']"
+            href="https://www.infosys.com/"
+            target="_blank"
+          >
+            Infosys
+          </a>
         </p>
       </div>
-      <div className="pages h-3/5 mt-8">{renderPage(page)}</div>
+      <p className="text-sm leading-relaxed opacity-60">
+        I'm Tushar Balakrishnan V, a <b>ServiceNow Developer</b> dedicated to
+        creating efficient, scalable, and user-focused solutions. I specialize
+        in leveraging the ServiceNow platform to streamline workflows, automate
+        processes, and solve real-world business challenges. With a strong
+        passion for continuous learning and clean coding practices, I strive to
+        bridge the gap between technology and business needs while growing into
+        a well-rounded and impactful software professional.
+      </p>
+      <div className="project-section my-5">
+        <strong className="text-md cursor-pointer underline underline-offset-8">
+          projects
+        </strong>
+        <Projects />
+      </div>
+      <div className="work-section my-5">
+        <strong className="text-md cursor-pointer underline underline-offset-8">
+          work experience
+        </strong>
+        <WorkExp />
+      </div>
+      <div className="blog-section my-5">
+        <strong className="text-md cursor-pointer underline underline-offset-8">
+          blogs
+        </strong>
+        <Blogs />
+      </div>
+      <div className="skills-section my-5">
+        <strong className="text-md cursor-pointer underline underline-offset-8">
+          skills
+        </strong>
+        <Skills />
+      </div>
+      <div className="certs-section my-5">
+        <strong className="text-md cursor-pointer underline underline-offset-8">
+          certifications
+        </strong>
+        <Certifications />
+      </div>
+
+      <div className="footer my-5">
+        <SocialPill />
+      </div>
     </div>
   );
 };

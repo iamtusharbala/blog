@@ -15,14 +15,14 @@ const experiences = [
       "Client Scripts",
       "Integrations",
     ],
-  }
+  },
 ];
 
 const WorkExp = () => {
   return (
     <>
       {experiences.map((experience, index) => (
-        <div key={index} className="experience my-3">
+        <div key={index} className="experience my-6">
           <div className="years dark-grey text-sm">
             {experience.startYear} - {experience.endYear || "Present"}
           </div>
@@ -30,14 +30,14 @@ const WorkExp = () => {
             <div className="job-title text-xl font-semibold dark:text-white">
               {experience.position} | {experience.company}
             </div>
-            <div className="job-description dark-grey mt-2">
+            <div className="job-description mt-2 text-sm leading-relaxed opacity-60">
               {experience.description}
             </div>
-            <div className="skills-pill flex flex-wrap gap-2 mt-3">
+            <div className="skills-pill flex flex-wrap gap-4 mt-4">
               {experience.skills.map((skill, i) => (
                 <span
                   key={i}
-                  className="bg-gray-200 text-sm px-3 py-1 rounded-full cursor-pointer dark:bg-[#757575]"
+                  className="text-sm px-3 py-1 rounded-full cursor-pointer border border-dashed"
                 >
                   {skill}
                 </span>
@@ -46,7 +46,6 @@ const WorkExp = () => {
           </div>
         </div>
       ))}
-      <hr/>
     </>
   );
 };

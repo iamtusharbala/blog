@@ -35,43 +35,24 @@ const Projects = () => {
     fetchRepos();
   }, []);
   return (
-    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box dark:bg-[#1D1D1D] z-10">
+    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box z-10 mt-4">
       {loading ? (
         <div className="flex justify-center items-center h-40 text-sm opacity-70">
           <span className="loading loading-dots loading-xl"></span>.
         </div>
       ) : projectArray.length > 0 ? (
-        <ul className="list rounded-box shadow-md">
-          {projectArray.map((project, index) => (
-            <li className="list-row" key={project.id}>
-              <div className="text-4xl font-thin opacity-30 tabular-nums">
-                {index + 1}
-              </div>
-              <div className="list-col-grow">
-                <div className="text-xl font-semibold">{project.name}</div>
-                <div className="text-sm mt-2 opacity-60">
-                  {project.description}
-                </div>
-              </div>
-              <a
-                className="btn btn-square btn-ghost cursor-pointer tooltip tooltip-left"
-                data-tip="go to repo"
-                href={project.html_url}
-                target="_blank"
-              >
-                <Github />
-              </a>
-
-              {project.homepage && (
+        <ul className="flex gap-4">
+          {projectArray.map((project) => (
+            <li className="list-item" key={project.id}>
+              <div className="text-md leading-relaxed opacity-60">
                 <a
-                  className="btn btn-square btn-ghost cursor-pointer tooltip tooltip-left"
-                  data-tip="go to live!"
-                  href={project.homepage}
+                  className="after:content-['_↗'] dark:hover:text-white hover:opacity-100 hover:text-black"
+                  href={project.html_url}
                   target="_blank"
                 >
-                  <Radio />
+                  {project.name}
                 </a>
-              )}
+              </div>
             </li>
           ))}
         </ul>
