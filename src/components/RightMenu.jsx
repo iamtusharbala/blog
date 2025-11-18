@@ -23,15 +23,17 @@ const RightMenu = () => {
           </span>
         </li>
       </NavLink>
-      <NavLink to="/rss-feed" className={linkClasses}>
+      {/* <NavLink to="/rss-feed" className={linkClasses}>
         <li className="lowercase hover:text-[#3B82F6]">
           <span>
             rss feed
             <MoveUpRight style={{ display: "inline-block" }} />
           </span>
         </li>
-      </NavLink>
-      <li className="cursor-default shrink text-gray-500 hover:text-black dark:hover:text-white text-xl">MIT License 2025</li>
+      </NavLink> */}
+      <li className="cursor-default shrink text-gray-500 hover:text-black dark:hover:text-white text-xl">
+        MIT License 2025
+      </li>
     </ul>
   );
 };

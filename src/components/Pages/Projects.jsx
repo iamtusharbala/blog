@@ -35,7 +35,7 @@ const Projects = () => {
     fetchRepos();
   }, []);
   return (
-    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box dark:bg-[#121212] z-10">
+    <div className="max-h-80 overflow-y-auto overflow-x-hidden rounded-box dark:bg-[#1D1D1D] z-10">
       {loading ? (
         <div className="flex justify-center items-center h-40 text-sm opacity-70">
           <span className="loading loading-dots loading-xl"></span>.

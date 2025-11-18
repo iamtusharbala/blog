@@ -9,7 +9,7 @@ import Message from "./components/Message";
 
 const App = () => {
   return (
-    <div className="h-max sm:h-screen w-screen bg-white dark:bg-[#121212] @container px-4 mx-auto bs-sm:max-w-bs-sm bs-md:max-w-bs-md bs-lg:max-w-bs-lg bs-xl:max-w-bs-xl bs-xxl:max-w-bs-xxl">
+    <div className="h-max sm:h-screen w-screen bg-white dark:bg-[#1D1D1D] @container px-4 mx-auto bs-sm:max-w-bs-sm bs-md:max-w-bs-md bs-lg:max-w-bs-lg bs-xl:max-w-bs-xl bs-xxl:max-w-bs-xxl">
       <Navbar />
       <div className="lg:mx-45 h-4/6 md:flex sm:flex-col xl:flex-row lg:justify-between">
         <LeftMenu />

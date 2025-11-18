@@ -56,13 +56,13 @@ const Container = ({ page }) => {
         </div>
 
         <p
-          className="text-2xl mt-3 mb-0 dark:text-white"
+          className="text-xl mt-3 mb-0 dark:text-white"
           style={{ fontWeight: 500 }}
         >
           Tushar Balakrishnan V
         </p>
         <p
-          className="text-md jetbrains-mono-font dark-grey dark:text-[#d9d9d9]"
+          className="text-sm jetbrains-mono-font dark-grey dark:text-[#d9d9d9]"
           style={{ fontStyle: "normal", letterSpacing: "1px" }}
         >
           ServiceNow Developer | Infosys
