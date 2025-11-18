@@ -26,8 +26,8 @@ const WorkExp = () => {
           <div className="years dark-grey text-sm">
             {experience.startYear} - {experience.endYear || "Present"}
           </div>
-          <div className="job-details mt-2">
-            <div className="job-title text-xl font-semibold dark:text-white">
+          <div className="job-details">
+            <div className="job-title text-md font-semibold dark:text-white">
               {experience.position} | {experience.company}
             </div>
             <div className="job-description mt-2 text-sm leading-relaxed opacity-60">
