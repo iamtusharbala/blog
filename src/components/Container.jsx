@@ -59,14 +59,13 @@ const Container = () => {
           </a>
         </p>
       </div>
-      <p className="text-sm leading-relaxed opacity-60">
-        I'm Tushar Balakrishnan V, a <b>ServiceNow Developer</b> dedicated to
-        creating efficient, scalable, and user-focused solutions. I specialize
-        in leveraging the ServiceNow platform to streamline workflows, automate
-        processes, and solve real-world business challenges. With a strong
-        passion for continuous learning and clean coding practices, I strive to
-        bridge the gap between technology and business needs while growing into
-        a well-rounded and impactful software professional.
+      <p className="text-sm leading-relaxed opacity-60 text-wrap">
+        I'm a <span className="font-bold">ServiceNow Developer</span> who enjoys
+        writing clean, reliable code and building practical applications. With
+        JavaScript and Node.js at the core of my work, I focus on creating
+        solutions that simplify processes and deliver real value. I love
+        continuously learning, exploring new technologies, and building side
+        projects to grow into a well-rounded engineer.
       </p>
       <div className="project-section my-5">
         <strong className="text-md cursor-pointer underline underline-offset-8">
@@ -99,7 +98,7 @@ const Container = () => {
         <Certifications />
       </div>
 
-      <div className="footer my-5">
+      <div className="footer-section my-5">
         <SocialPill />
       </div>
     </div>
