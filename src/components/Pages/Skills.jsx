@@ -7,6 +7,8 @@ const skills = [
   "NPM",
   "Node.js",
   "Express",
+  "Web Development",
+  "Tailwind CSS",
   "Mongo DB",
   "Figma",
   "React",
@@ -23,7 +25,7 @@ const Skills = () => {
         {skills.map((skill, i) => (
           <span
             key={i}
-            className="text-sm px-3 py-1 rounded-full hover:text-white hover:bg-[#3B82F6] transition-colors cursor-pointer m-1 border border-dashed"
+            className="text-sm py-1 rounded-sm hover:text-white hover:bg-[#3B82F6] transition-colors cursor-pointer m-1 dark:bg-[#191818] bg-gray-50 p-5"
           >
             {skill}
           </span>
